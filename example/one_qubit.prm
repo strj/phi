@@ -1,0 +1,40 @@
+# Quantum annealing of a single qubit in a non-Markovian
+# environment.
+OutputFile=one_qubit_100.txt
+verbose=1
+hbar=1
+kB=1
+Timestep=0.001
+OutputMinimumTimestep=1.0
+RKF45Mindt=1e-06
+RKF45tolerance=1e-06
+TimeLocal=0
+HierarchyTruncation=2
+MatsubaraTerms=0
+NumStates=2
+TransverseField:
+1.0,0.78,0.56,0.34,0.15,0.055,0.012,1e-3,1e-4,1e-5,0
+LongitudinalField:
+0,1.2e-4,1.5e-3,9e-3,0.042,0.166,0.332,0.498,0.664,0.83,1.0
+TransverseHamiltonian:
+0.00000E+00,9.00000E+00
+9.00000E+00,0.00000E+00
+LongitudinalHamiltonian:
+5.550E+00,0.00000E+00
+0.00000E+00,-5.550E+00
+NumCouplingTerms=1
+CorrelatedCouplingTerms:
+-1.00000E+00,1.00000E+00
+Gamma:
+2.0
+Lambda:
+0.000001
+# 20.577 * [K] = Ghz
+Temperature=0.41154
+InitialDensityMatrix:
+0.5,0.5
+0.5,0.5
+RKF45Mindt=1e-08
+RKF45tolerance=1e-06
+# 1 us
+Time=1000
