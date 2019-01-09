@@ -5,7 +5,7 @@
 
 #ifndef NOBLAS
 extern "C" {
-#include "third_party/lapack/cblas.h"
+#include "cblas.h"
 }
 #else
 #ifndef CBLAS_ENUM_DEFINED_H

@@ -87,7 +87,7 @@ void PhiParameters::SetDefaults() {
 
 bool PhiParameters::FileExists(const char *filename) {
   std::ifstream ifile(filename);
-  return ifile;
+  return ifile.is_open();
 }
 
 void PhiParameters::ReadCommandLine(int num_args, char *argv[]) {

@@ -81,11 +81,11 @@ phi_size_t CubicSpline::Locate(Float x) {
 }
 
 void CubicSpline::SolveTridiagonal() {
-  lapack::integer n = size_;
-  lapack::integer one = 1;
-  lapack::integer info;
-  lapack::Float *diagonal = new lapack::Float[size_];
-  lapack::Float *off_diagonal = new lapack::Float[size_ - 1];
+  lapack_int n = size_;
+  lapack_int one = 1;
+  lapack_int info;
+  Float *diagonal = new Float[size_];
+  Float *off_diagonal = new Float[size_ - 1];
   diagonal[0] = diagonal[size_ - 1] = 2.;
   for (phi_size_t i = 1; i < size_ - 1; ++i) {
     diagonal[i] = 4.;
@@ -93,7 +93,7 @@ void CubicSpline::SolveTridiagonal() {
   for (phi_size_t i = 0; i < size_ - 1; ++i) {
     off_diagonal[i] = 1.;
   }
-  lapack::Float *b = new lapack::Float[size_];
+  Float *b = new Float[size_];
   for (phi_size_t i = 0; i < size_; ++i) {
     b[i] = b_[i];
   }

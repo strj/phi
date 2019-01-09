@@ -1,15 +1,24 @@
 #ifndef PHI_LAPACK_WRAPPER_H_
 #define PHI_LAPACK_WRAPPER_H_
 
+#include <complex>
+
 #include "numeric_types.h"
 
-#include "third_party/lapack/lapack.h"
+#define lapack_complex_float std::complex<float>
+#define lapack_complex_double std::complex<double>
+#define lapack_complex_float_real(z) (real(z))
+#define lapack_complex_float_imag(z) (imag(z))
+#define lapack_complex_double_real(z) (real(z))
+#define lapack_complex_double_imag(z) (imag(z))
+
+#include "lapacke.h"
 
 #ifdef SINGLEPRECISION
-namespace lapack {
-  typedef lapack::complex Complex;
-  typedef lapack::real Float;
-}
+//namespace lapack {
+//  typedef lapack_complex_float Complex;
+//  typedef float Float;
+//}
 #define phi_xheevr(job, range, format, n, data, lda, vi, vu, li, lu, tol, nf, \
                    z, v, ldz, i, w, lw, rw, lrw, iw, liw, info) \
         cheevr_(job, range, format, n, data, lda, vi, vu, lu, lu, tol, nf, \
@@ -21,10 +30,10 @@ namespace lapack {
 #define phi_complex_xpttrs(uplo, n, nrhs, d, e, b, ldb, info) \
         cpttrs_(uplo, n, nrhs, d, e, b, ldb, info)
 #else
-namespace lapack {
-  typedef lapack::doublecomplex Complex;
-  typedef lapack::doublereal Float;
-}
+//namespace lapack {
+//  typedef lapack_complex_double Complex;
+//  typedef double Float;
+//}
 #define phi_xheevr(job, range, format, n, data, lda, vi, vu, li, lu, tol, nf, \
                    z, v, ldz, i, w, lw, rw, lrw, iw, liw, info) \
         zheevr_(job, range, format, n, data, lda, vi, vu, li, lu, tol, nf, \
@@ -39,25 +48,25 @@ namespace lapack {
 
 struct ZheevrParameters {
   char job[1], range[1], format[1];
-  lapack::integer size;
-  lapack::integer il, iu;
-  lapack::Float tolerance;
-  lapack::integer lda;
-  lapack::integer ldz;
-  lapack::integer number_eigenvalues_returned;
-  lapack::integer* eigenvalues_support;
-  lapack::Complex* complex_workspace;
-  lapack::Float* real_workspace;
-  lapack::integer* integer_workspace;
-  lapack::integer size_complex_workspace;
-  lapack::integer size_real_workspace;
-  lapack::integer size_integer_workspace;
-  lapack::integer info;
-  lapack::Float* eigenvalues_real;
-  lapack::Complex* local_matrix;
+  lapack_int size;
+  lapack_int il, iu;
+  Float tolerance;
+  lapack_int lda;
+  lapack_int ldz;
+  lapack_int number_eigenvalues_returned;
+  lapack_int* eigenvalues_support;
+  Complex* complex_workspace;
+  Float* real_workspace;
+  lapack_int* integer_workspace;
+  lapack_int size_complex_workspace;
+  lapack_int size_real_workspace;
+  lapack_int size_integer_workspace;
+  lapack_int info;
+  Float* eigenvalues_real;
+  Complex* local_matrix;
 
   // Unused parameters but needed for zheevr_
-  lapack::Float vl, vu;
+  Float vl, vu;
 
   void Initialize(int rank, int num_vectors) {
     job[0] = 'V';
@@ -69,7 +78,7 @@ struct ZheevrParameters {
     lda = rank;
     ldz = rank;
 
-    local_matrix = new lapack::Complex[size * size];
+    local_matrix = new Complex[size * size];
 
     char safe_tolerance = 'S';
     tolerance = dlamch_(&safe_tolerance);  // 'Safe' tolerance.
@@ -81,19 +90,19 @@ struct ZheevrParameters {
 
     int M = calculate_all ? size : iu - il + 1;
 
-    eigenvalues_real = new lapack::Float[size];
+    eigenvalues_real = new Float[size];
 
-    lapack::Complex * eigenvectors;
-    eigenvectors = new lapack::Complex[size*size];
+    Complex * eigenvectors;
+    eigenvectors = new Complex[size*size];
 
-    eigenvalues_support = new lapack::integer[2 * M];
+    eigenvalues_support = new lapack_int[2 * M];
 
     size_complex_workspace = -1;
     Complex complex_workspace_size_estimate;
     size_real_workspace = -1;
     Float real_worskspace_size_estimate;
     size_integer_workspace = -1;
-    lapack::integer integer_workspace_size_estimate;
+    lapack_int integer_workspace_size_estimate;
 
     // Optimal size estimate for workspaces.
     phi_xheevr(job,
@@ -121,13 +130,13 @@ struct ZheevrParameters {
                &info);
 
     size_complex_workspace =
-        (lapack::integer)real(complex_workspace_size_estimate);
-    size_real_workspace = (lapack::integer)(real_worskspace_size_estimate);
+        (lapack_int)lapack_complex_float_real(complex_workspace_size_estimate);
+    size_real_workspace = (lapack_int)(real_worskspace_size_estimate);
     size_integer_workspace = integer_workspace_size_estimate;
 
-    complex_workspace = new lapack::Complex[size_complex_workspace];
-    real_workspace = new lapack::Float[size_real_workspace];
-    integer_workspace = new lapack::integer[size_integer_workspace];
+    complex_workspace = new Complex[size_complex_workspace];
+    real_workspace = new Float[size_real_workspace];
+    integer_workspace = new lapack_int[size_integer_workspace];
     delete []eigenvectors;
   }
 
