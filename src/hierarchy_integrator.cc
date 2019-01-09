@@ -105,10 +105,11 @@ std::string HierarchyIntegrator::GetInfo() {
      << "Using BLAS for matrix functions\n"
 #endif
 #ifdef SINGLEPRECISION
-     << "Using single precision floating point operations\n";
+     << "Using single precision floating point operations\n"
 #else
-     << "Using double precision floating point operations\n";
+     << "Using double precision floating point operations\n"
 #endif
+     << "Version 1.1";
   return ss.str();
 }
 
