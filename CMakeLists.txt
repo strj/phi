@@ -7,33 +7,19 @@ include_directories(src)
 set(SOURCES
 	src/phi.cc
 	src/barrier.cc
-	#src/barrier.h
 	src/blas_wrapper.cc
-	#src/blas_wrapper.h
 	src/complex_matrix.cc
-	#src/complex_matrix.h
 	src/cubic_spline.cc
-	#src/cubic_spline.h
 	src/hierarchy.cc
-	#src/hierarchy.h
 	src/hierarchy_integrator.cc
-	#src/hierarchy_integrator.h
 	src/hierarchy_node.cc
-	#src/hierarchy_node.h
 	src/hierarchy_updater.cc
-	#src/hierarchy_updater.h
 	src/hilbert_space_truncator.cc
 	src/hilbert_space_truncator.h
-	#src/lapack_wrapper.h
-	#src/numeric_types.h
 	src/parameter_input.cc
-	#src/parameter_input.h
 	src/phi_parameters.cc
-	#src/phi_parameters.h
 	src/restart_helper.cc
-	#src/restart_helper.h
 	src/timer.cc
-	#src/timer.h
 	)
 
 
