@@ -9,7 +9,7 @@ OutputMinimumTimestep=1.0
 RKF45Mindt=1e-06
 RKF45tolerance=1e-06
 TimeLocal=0
-HierarchyTruncation=2
+HierarchyTruncation=3
 MatsubaraTerms=0
 NumStates=2
 TransverseField:

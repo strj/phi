@@ -1,0 +1,447 @@
+#PHI 1.1
+#Parameters:
+#-----------
+#ReducedPlanckConstant=1
+#BoltzmannConstant=1
+#NumStates=2
+#MatsubaraTerms=0
+#CouplingTerms=1
+#Temperature=0.41154
+#HierarchyTruncation=3
+#TimeLocal=0
+#Timestep=0.001
+#Time=1000
+#filter=0
+#RKF45tolerance = 1e-06
+#RKF45mindt = 1e-06
+#gamma:
+#2
+#lambda:
+#1e-06
+#TransverseField:
+#1,0.78,0.56,0.34,0.15,0.055,0.012,0.001,0.0001,1e-05,0
+#LongitudinalField:
+#0,0.00012,0.0015,0.009,0.042,0.166,0.332,0.498,0.664,0.83,1
+#CorrelatedCouplingTerms:
+#-1,1
+#TransverseHamiltonian:
+#(0,0),(9,0)
+#(9,0),(0,0)
+#LongitudinalHamiltonian:
+#(5.55,0),(0,0)
+#(0,0),(-5.55,0)
+#InitialDensityMatrix:
+#(0.5,0),(0.5,0)
+#(0.5,0),(0.5,0)
+#Estimated Number of Matrices=3
+#-------------
+#Threads=1
+#Integrator=rkf45
+#Total Number of matrices:3
+#Memory to store matrices for calculations:
+#hierarchy: 0.000183105 Mb.
+#rk4: 0.00229645 Mb.
+#rkf45: 0.00319672 Mb.
+#rk4spectrum: 0.00162506 Mb.
+#rkf45spectrum: 0.00325775 Mb.
+#steadystate: 0.00165176 Mb.
+#-------------
+0 (0.5,0) (0.5,0) (0.5,0) (0.5,0) 
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+               0.001      (0.5,0) (0.5,5.408e-12) (0.5,-5.408e-12) (0.5,0)
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Info: Time for single timestep: 0 s.
+#Info: Estimated time for 1 time unit: 0 hrs.
+#Info: Total running time: 0 days.
+#Total number of integration steps = 13046
+#Total number of accepted integration steps = 12412
+#Total integration time = 0 mins.
+                1000      (0.9984,0) (-0.0001018,-0.00238) (-0.0001018,0.00238) (0.001599,0)

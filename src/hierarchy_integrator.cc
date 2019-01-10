@@ -73,26 +73,6 @@ HierarchyIntegrator::HierarchyIntegrator(PhiParameters *p, RestartHelper *r)
   Log(0, GetInfo());
 }
 
-HierarchyIntegrator::HierarchyIntegrator(int num_args, char *argv[])
-    : Hierarchy() {
-  Log(-1, GetInfo());
-  parameters_ = new PhiParameters();
-  parameters_->ReadCommandLine(num_args, argv);
-  verbose_ = parameters_->verbose;
-  restart_helper_ = new RestartHelper(parameters_->restart_input_filename,
-                                      parameters_->restart_output_filename,
-                                      parameters_->restart_backup_filename);
-
-  identity_matrix_ =
-      new Complex[parameters_->num_states * parameters_->num_states];
-  SetElementsToZero(parameters_->num_states * parameters_->num_states,
-                    identity_matrix_);
-  for (int i = 0; i < parameters_->num_states; ++i) {
-    identity_matrix_[i * (parameters_->num_states + 1)] = kOne;
-  }
-  Launch();
-}
-
 std::string HierarchyIntegrator::GetInfo() {
   ostringstream ss;
   ss << "PHI Parallel Hierarchy Integrator by Johan Strumpfer, 2009-2012.\n"
@@ -445,6 +425,7 @@ void HierarchyIntegrator::Initialize(int num_threads, bool assign_memory) {
     Log(0, "Not using normalized auxiliary density matrices.");
   }
   if (gamma != NULL && lambda != NULL) {
+    Log(2, "Initializing correlation function parameters");
     correlation_fn_constants_ = new Complex[num_correlation_fn_terms_];
     SetElementsToZero(num_correlation_fn_terms_, correlation_fn_constants_);
     abs_correlation_fn_constants_ = new Float[num_correlation_fn_terms_];
@@ -493,6 +474,7 @@ void HierarchyIntegrator::Initialize(int num_threads, bool assign_memory) {
 
   if (num_states_ > 0 && hierarchy_truncation_level > 0 &&
       num_bath_coupling_terms_ > 0 && matsubara_truncation_ > 0) {
+    Log(2, "Initializing matrix hyperindex.");
     int vb = verbose_;
     if (run_method == PRINTHIERARCHY) {
       verbose_ = 3;
@@ -512,6 +494,7 @@ void HierarchyIntegrator::Initialize(int num_threads, bool assign_memory) {
   }
 
   if (use_time_local_truncation && do_integration) {
+    Log(2, "Initializing time local truncation.");
     PrepConstructTL();
   } else {
     time_local_matrices_ = NULL;
@@ -647,6 +630,7 @@ void HierarchyIntegrator::PartitionHierarchySimple(int num_threads) {
   for (int i = 0; i < matrix_count_; ++i) {
     node_indices_th_[num_threads][i] = i;
   }
+  Log(3, "Partitioning Done.");
 }
 
 void HierarchyIntegrator::PartitionHierarchy(int num_threads) {
@@ -680,7 +664,6 @@ void HierarchyIntegrator::PartitionHierarchy(int num_threads) {
       std::cout << i << ": " << node_count_th_[i] << "\n";
     }
   }
-
   int n = 0;
   int *m_as;
   m_as = new int[num_threads];
@@ -716,6 +699,7 @@ void HierarchyIntegrator::PartitionHierarchy(int num_threads) {
     n = 1 + hierarchy_level_[1];
     int *prev_weights;
     prev_weights = new int[num_threads];
+    Log(3, "Fill in.");
     for (int l = 2; l < truncation_level; ++l) {
       for (int i = 0; i < hierarchy_level_[l]; ++i) {
         if (multi_index_map_[n + i].thread == -1 && next_t == 0) {
@@ -778,6 +762,7 @@ void HierarchyIntegrator::PartitionHierarchy(int num_threads) {
       node_count_th_[t] = m_as[t];
     }
   }
+  Log(2, ss.str());
   ss.clear();
   for (int t = 0; t < num_threads; ++t) {
     ss << "[" << t << "]:\t";
@@ -785,8 +770,10 @@ void HierarchyIntegrator::PartitionHierarchy(int num_threads) {
       ss << node_indices_th_[t][m] << " ";
     }
     ss << "\n";
+    Log(2, ss.str());
+    ss.clear();
   }
-  Log(2, ss.str());
+  Log(3, "Partitioning Done.");
 }
 
 void HierarchyIntegrator::CountInterThreadConnections() {
